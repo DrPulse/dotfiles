@@ -1,20 +1,25 @@
+# GUIDE CHEZ MOI
+
 ## CHANGEMENTS DANS LES FICHIERS
 
-### update des fichiers chezmoi
+### Update des fichiers chezmoi
 
 Pour mettre à jour les dotfiles : 
+
 `~/.ocal/share/chezmoi/dot_XXX`
+
 OU
+
 `chezmoi edit ~/.XXX` (pas de dot ici, fichier d'origine local)
 
 
-### voir les diffs et changements local
+### Voir les diffs et changements local
 
 `chezmoi diff` -> voir les diffs entre fichiers local et version chezmoi
 `chezmoi -v apply` -> appliquer les changements au fichier original local
 
 
-### push les changements au repo
+### Push les changements au repo
 
 `git add .`
 `git commit -m "commit message"`
@@ -41,3 +46,7 @@ git push -u origin main
 ## PULL ET APPLY LES DERNIERS CHANGEMENTS
 
 Si besoin utiliser `chezmoi update -v` pour pull et apply les dernières config du repo
+
+
+## DOC
+https://jerrynsh.com/how-to-manage-dotfiles-with-chezmoi/
