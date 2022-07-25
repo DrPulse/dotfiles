@@ -2,15 +2,17 @@
 
 ### update des fichiers chezmoi
 
--> ~/.ocal/share/chezmoi/dot_XXX
+Pour mettre à jour les dotfiles : 
+`~/.ocal/share/chezmoi/dot_XXX`
 OU
--> chezmoi edit ~/.XXX (pas de dot ici, fichier d'origine local)
+`chezmoi edit ~/.XXX` (pas de dot ici, fichier d'origine local)
 
 
 ### voir les diffs et changements local
 
 `chezmoi diff` -> voir les diffs entre fichiers local et version chezmoi
 `chezmoi -v apply` -> appliquer les changements au fichier original local
+
 
 ### push les changements au repo
 
