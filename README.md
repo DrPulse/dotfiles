@@ -6,24 +6,31 @@
 
 Pour mettre à jour les dotfiles : 
 
-`~/.ocal/share/chezmoi/dot_XXX`
+`~/.local/share/chezmoi/dot_XXX`
 
 OU
 
 `chezmoi edit ~/.XXX` (pas de dot ici, fichier d'origine local)
 
 
+
 ### Voir les diffs et changements local
 
 `chezmoi diff` -> voir les diffs entre fichiers local et version chezmoi
+
 `chezmoi -v apply` -> appliquer les changements au fichier original local
+
 
 
 ### Push les changements au repo
 
 `git add .`
+
 `git commit -m "commit message"`
+
 `git push -u origin main`
+
+
 
 ## AJOUT DE NOUVEAUX FICHIERS
 
@@ -39,8 +46,11 @@ git push -u origin main
 
 `sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply DrPulse` -> initialisation du repo
 
+
 `chezmoi diff` -> vérification des diffs entre le repo et local
+
 `chezmoi apply` -> si la config est bonne
+
 
 
 ## PULL ET APPLY LES DERNIERS CHANGEMENTS
