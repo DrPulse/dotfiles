@@ -96,8 +96,8 @@ alias anaconda='anaconda-navigator'
 alias update='/home/$(whoami)/script/update.sh'
 alias bat='batcat'
 
-alias bluetooth_off='sudo systemctl stop bluetooth.service'
-alias bluetooth_on='sudo systemctl restart bluetooth.service'
+alias bluetooth_off='sudo systemctl stop bluetooth.service && echo "bluetooth disabled"'
+alias bluetooth_on='sudo systemctl restart bluetooth.service && echo "bluetooth enabled"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
