@@ -42,15 +42,13 @@ format = 'on [$hostname](bold yellow) '
 disabled = false
 
 [directory]
-truncation_length = 3
 truncation_symbol = "…/"
-home_symbol = " ~"
-read_only_style = "197"
+read_only_style = "red"
 read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "on [$symbol$branch]($style) "
 truncation_symbol = "…/"
 style = "bold green"
@@ -70,6 +68,14 @@ staged = '[++\($count\)](green)'
 renamed = "襁 "
 deleted = " "
 
+[aws]
+disabled = true
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
 [terraform]
 format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
 
@@ -84,9 +90,7 @@ symbol = "🐍 "
 python_binary = "python3"
 
 [gcloud]
-format = 'on [$symbol$account(\($region\))]($style) '
-symbol = '☁️ '
-style = 'bold blue'
+disabled = true
 
 [golang]
 format = 'via [$symbol($version )]($style)'
@@ -96,15 +100,11 @@ style = 'bold cyan'
 [nodejs]
 format = "via [ $version](bold green) "
 
-[kubernetes]
-format = 'on [ $context\($namespace\)](bold purple) '
-disabled = false
-
 [cmd_duration]
-format = "[$duration]($style)"
+format = "[took]($style) [$duration]($style)"
 style = "yellow"
 min_time = 100
-show_milliseconds = true
+#show_milliseconds = true
 
 [time]
 disabled = false

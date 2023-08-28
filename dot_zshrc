@@ -7,6 +7,8 @@ fi
 
 HISTSIZE=10000
 SAVEHIST=10000
+HISTFILE=~/.zsh_history
+setopt appendhistory
 
 # Basic auto/tab complete:
 autoload -Uz compinit
@@ -17,14 +19,22 @@ zstyle ':completion:*' menu select
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Load ; should be last
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # widgets and utilities
-eval "$(navi widget zsh)"
-eval "$(thefuck --alias fu)"
+if ! [ -x "$(command -v navi)" ]; then
+else
+   eval "$(navi widget zsh)"
+fi
+
+if ! [ -x "$(command -v thefuck)" ]; then
+else
+   eval "$(thefuck --alias fu)"
+fi
 
 # prompt selection
 eval "$(starship init zsh)"
